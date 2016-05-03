@@ -32,6 +32,7 @@ for (coun in 8:ncol(Countries))
   #--- Initial Countries and Variables
   #-----------------------------------------
   # Load mortility data from Mortility.org
+  suppressWarnings(rawmortdata <- hmd.mx(Countries[2,coun], "user_email","user_password", Countries[1,coun]))
   
   m = length(years)
   n = length(ages)
